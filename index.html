@@ -46,18 +46,21 @@
   <button data-t="afect" class="on">Afectaciones (EDAN)</button>
   <button data-t="usar">Capacidades USAR</button>
   <button data-t="sobre">Sobrevuelos</button>
+  <button data-t="inv">Inventario de imágenes</button>
 </nav>
 <div class="frames">
   <iframe id="f-afect" src="afectaciones.html?embed=1" title="Afectaciones"></iframe>
   <iframe id="f-usar" class="hide" data-src="capacidades-usar.html?embed=1" title="Capacidades USAR"></iframe>
   <iframe id="f-sobre" class="hide" data-src="sobrevuelos.html?embed=1" title="Sobrevuelos"></iframe>
+  <iframe id="f-inv" class="hide" data-src="inventario.html?embed=1" title="Inventario de imágenes"></iframe>
 </div>
 <script>
   const tabs=[...document.querySelectorAll("nav.tabs button")];
   const frames={
     afect:document.getElementById("f-afect"),
     usar :document.getElementById("f-usar"),
-    sobre:document.getElementById("f-sobre")
+    sobre:document.getElementById("f-sobre"),
+    inv  :document.getElementById("f-inv")
   };
   function show(t){
     tabs.forEach(b=>b.classList.toggle("on",b.dataset.t===t));
